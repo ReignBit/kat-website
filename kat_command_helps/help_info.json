@@ -1,0 +1,53 @@
+{
+    "Level": {
+        "commands": {
+            "level": "Shows your level and current XP for the server.",
+            "leaderboard": "Shows the top 10 highest level users in the server."
+        },
+        "badges": []
+    },
+    "Fun": {
+        "commands": {
+            "hug [user]": "Hug a user.",
+            "kill [user]": "Kill a user.",
+            "spank [user]": "Spank a user...",
+            "emote <action> [user]": "Perform a custom emote to a user.",
+            "time": "Gets the current UTC time.",
+            "stuff": "Gru will stuff you all in the crust.",
+            "random [...]": "Let Kat choose from a list of inputs.",
+            "hitormiss": "I guess they never miss, huh?",
+            "owoifier": "OwOifies the last sent message."
+        },
+        "badges": []
+    },
+    "Translate": {
+        "commands": {
+            "translate list": "Sends a list of possible translatable languages",
+            "translate [from:to (default: en:ja)]": "Attempts to translate the last sent message.",
+            "translatelast <user> [from:to (default: en:ja)]": "Attempts to translate the user's last message in to [language=EN-US]",
+            "translatemsg <msg ID> [from:to (default: en:ja)]": "Attempts to translate the ID's message."
+        },
+        "badges": []
+    },
+    "Moderation": {
+        "commands": {
+            "clear [<100]": "Remove up to 100 messages from the channel.",
+            "kick <user> [reason]": "Kick user for reason.",
+            "ban <user> [reason]": "Ban a user for reason.",
+            "warn <user> [reason]": "Warn a user for reason."
+        },
+        "badges": [
+            "Mod"
+        ]
+    },
+    "Administration": {
+        "commands": {
+            "config [module]": "View/edit Kat settings for your server.",
+            "purge <user> [reason]": "Ban a user and delete all of their messages."
+            
+        },
+        "badges": [
+            "Admin"
+        ]
+    }
+}

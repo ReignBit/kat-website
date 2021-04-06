@@ -1,0 +1,52 @@
+* {
+	font-family: sans-serif;
+	color: white;
+
+	/*
+	border-color: pink;
+	border-style: solid;
+	border-width: 1px;
+	*/
+}
+
+h3 {
+	display:inline;
+	padding-right: 10px;
+}
+
+
+
+a:hover {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.color-discorddark{
+	background-color: #2c2f33;
+}
+
+.color-discordblue {
+	background-color: #7289da;
+	color: white;
+}
+
+.icon {
+	border-radius: 50%;
+	width: 65px;
+}
+
+.align {
+	padding-top: 10px;
+}
+
+.header {
+	vertical-align: middle;
+}
+
+.round-image {
+	border-radius: 50%;
+}
+

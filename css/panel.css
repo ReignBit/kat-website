@@ -1,0 +1,86 @@
+body {
+	font-family: "Roboto";
+	background-color: #222425;
+	color: white;
+}
+
+.login-banner {
+	margin-bottom: 5%;
+}
+
+
+a {
+	text-decoration: none;
+	
+}
+
+input {
+	background-color: #333;
+	border: none;
+	color: white;
+}
+
+input:hover {
+	background-color: #666;
+	cursor: pointer;
+}
+
+
+offline {
+	color: red;
+}
+
+online {
+	color: green;
+}
+
+.clickable {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+td {
+	background-color: #333;
+}
+
+.clickable:hover {
+	background-color: #666;
+}
+
+.color {
+	color: white;
+	background-color: #333
+}
+.color:hover {
+	color: #777;
+	background-color: #222;
+}
+
+.table {
+	color: ;
+}
+
+
+.service-container h2 {
+	text-align: center;
+}
+
+.service-container {
+	text-align: left;
+	width: 33%;
+	height: 300px;
+	display: inline-block;
+	margin: 0 100px;
+	overflow: hidden;
+	text-decoration: none;
+	color: white;
+	border-radius: 4px;
+	box-shadow: 5px 5px #181a1b;
+
+	background-color: #313435;
+}
+
+.service-list-container {
+
+}

@@ -1,0 +1,114 @@
+.body {
+	width: 100%;
+	padding-top: 10px;
+}
+
+.test {
+	padding-top: 20px;
+}
+
+.changelog-entry {
+	
+	margin: 0 5% 1% 15%;
+	padding-bottom: 1px;
+	background: #323232;
+	border-radius: 5px;
+	border: 1px solid grey;
+	backdrop-filter: blur(10px);
+}
+
+
+.changelog-text {
+	margin: 1%;
+	border-radius: 2px;
+	border: 1px solid #222;
+	text-shadow: 2px 3px 5px #000000;
+	
+}
+
+h5 {
+	margin-left: 5px;
+	color: lightgrey;
+}
+
+li {
+	list-style-type: none;
+}
+
+h2 {
+	margin-left: 1%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: white;
+}
+
+.timestamp {
+	margin-left: 1%;
+	color: #888;
+}
+
+.timestamp p {
+	color: #888;
+}
+
+.green {
+	color: lightgreen;
+}
+
+.orange {
+	color: orange;
+}
+
+.red {
+	color: red;
+}
+
+.grey {
+	color: grey;
+}
+
+.blue {
+	color: lightblue;
+}
+
+
+.li-added:before {
+	content: "+";
+	padding-right: 8px;
+	color: lightgreen;
+}
+
+.li-added {
+	color: lightgreen;
+}
+
+.li-blue {
+	color: lightblue;
+}
+
+.li-blue:before {
+	content: "*";
+	padding-right: 8px;
+	color: lightblue;
+}
+
+.li-change {
+	color: orange;
+}
+
+.li-change:before {
+	content: "*";
+	padding-right: 8px;
+	color: orange;
+}
+
+.li-remove {
+	color: darkred;
+	font-weight: bold;
+}
+
+.li-remove:before {
+	content: "-";
+	padding-right: 8px;
+	color: darkred;
+}
