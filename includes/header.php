@@ -116,11 +116,4 @@ include_once('includes/common.php') // Common functions and things used across m
         </div>
     </div>
 
-    <!-- API Warning Banner-->
-    <div class="alert alert-warning" role="alert">
-        > We are in the process of migrating to our new v2 api.
-        Due to this, the configuration dashboard and statistics are currently unavailable.
-        Kat is still able to be configured using the <code>$config</code> command in your Discord Server!
-    </div>
-
     
