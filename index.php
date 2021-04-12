@@ -24,12 +24,16 @@
     
     // DEV KAT INSTANCE STATUSES
     $yumiRequest = file_get_contents("/kat_command_helps/yumi_status");
-    $yumiStatus = str_getcsv($yumiRequest, ",")[0];
-    if ($yumiStatus == "") {$yumiStatus = "Offline";}
-    $yumiguildCount = str_getcsv($yumiRequest, ",")[1];
-    if ($yumiguildCount == "") {$yumiguildCount = "???";}
-    $yumiuserCount = str_getcsv($yumiRequest, ",")[2];
-    if ($yumiuserCount == "") {$yumiuserCount = "???";}
+    $yumiStatus = "Offline";
+    $yumiguildCount = "???";
+    $yumiuserCount = "???";
+    if ($yumiRequest)
+    {
+        $yumiStatus = str_getcsv($yumiRequest, ",")[0];
+        $yumiguildCount = str_getcsv($yumiRequest, ",")[1];
+        $yumiuserCount = str_getcsv($yumiRequest, ",")[2];
+    }
+    
 
     if ($katStatus){ $katStatus = "Online"; $showAlert = "style='display:none;'";} else { $katStatus = "Offline"; $showAlert = "";}
 ?>

@@ -1,6 +1,6 @@
 <?php 
 ob_start(); // Stop content being sent until php finished. (Allows for Header redirects later down the code.)
-ini_set('display_errors', 'On'); // Disable errors being shown on the webpage. 
+ini_set('display_errors', 'Off'); // Disable errors being shown on the webpage. 
 defined('INC_CHECK') || die('Direct access not permitted'); // Disallow direct access to file.
 session_start();    // Start PHP session.
 
@@ -28,7 +28,7 @@ include_once('includes/common.php') // Common functions and things used across m
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-    <title>Kat DEV | <?php echo $pageName;?></title>
+    <title>Kat | <?php echo $pageName;?></title>
 
     
 </head>
@@ -65,7 +65,7 @@ include_once('includes/common.php') // Common functions and things used across m
             <ul class="navbar-nav mr">
                 <!-- Login / User name Section -->
                 <li class="nav-item">
-					<!-- Logged in -->
+					<!-- Logged out -->
                     <?php 
 					if (!isset($_SESSION['access_token']))
 					{
@@ -75,15 +75,18 @@ include_once('includes/common.php') // Common functions and things used across m
 					{
 						$user = getUser();
 						echo '
-						<a class="nav-link active" href="panel.php">'.$user->username.'#'.$user->discriminator.'</a>';
+						<a class="nav-link active" href="panel.php"><b>'.$user->username.'#'.$user->discriminator.'</b></a>';
 					}
 					?>
 				</li>
-                    <!-- Logged out -->
+                    <!-- Logged in -->
 					<?php
 					if (isset($_SESSION['access_token']))
 					{
-						echo '<li class="nav-item"> <a class="nav-link" href="login.php?action=logout">Logout</a></li>';
+
+						echo '<li class="nav-item">
+                                <a class="nav-link" href="login.php?action=logout">Logout</a>
+                            </li>';
 					}
 					?>
             </ul>

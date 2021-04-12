@@ -132,22 +132,7 @@ function updateGuildSettings()
             $prefixJson = json_decode($prefixJson);
             $prefixJson->settings = $json;
 
-            echo json_encode($prefixJson);
-            //TODO: Something here fucking breaks.
-            /*
-                Generating the JSON string works.
-                somewhere between CURL and the API the body of the request
-                gets set to nothing...
-                API shows that request.json == None
-                Sooo.... I dont know... It must be something with cURL.
-                
-                Current test URL: http://dev.reign-network.co.uk/panel.php
-                API: PATCH http://api.reign-network.co.uk:5000/api/v2/guilds/438542169855361025
-                Fuckin' maybe think about recreating this dashboard in fuckin Flask. goddamn i hate PHP
-            */
             $o = aresPatch("/guilds/".$_POST['guild'], json_encode($prefixJson));
-            
-            var_dump($o);
 
             $actionMessage = "Settings updated.";
             $actionFailed = FALSE;

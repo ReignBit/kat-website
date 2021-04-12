@@ -4,6 +4,12 @@ defined('INC_CHECK') || die('Direct access not permitted');
     try
     {
         $data = aresGet("/guilds/".get("guild"));
+
+        if ($data == NULL)
+        {
+            throw new PDOException("Failed to connect to API");
+        }
+
         $settings = $data->data[0]->settings;
     }
     catch (PDOException $e)
@@ -14,7 +20,7 @@ defined('INC_CHECK') || die('Direct access not permitted');
                             </button>
                             <h4 class="alert-heading">Unable to process request.</h4>
                             <hr>
-                            <p class="mb-0">Something went wrong and we are unable to process your request. Please try again; if the error persists, please try later on.</p>
+                            <p class="mb-0 text-danger">Something went wrong and we are unable to process your request. Please try again; if the error persists, please try later on.</p>
                         </div>');
     }    
 ?>

@@ -12,6 +12,7 @@ function aresGet($endpoint)
     global $config;
 
     $ch = curl_init($config['API_ROOT'] . $endpoint);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     
@@ -29,6 +30,7 @@ function aresPost($endpoint, $data)
 {
     global $config;
     $ch = curl_init($config['API_ROOT'] . $endpoint);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     // Build POST fields
@@ -48,14 +50,13 @@ function aresPatch($endpoint, $data)
 {
     global $config;
     $ch = curl_init($config['API_ROOT'] . $endpoint);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-    var_dump($data);
-
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
+    $headers[] = 'Content-Type: application/json';
     $headers[] = 'Accept: application/json';
     $headers[] = 'Authorization: ' . $config['API_AUTH_METHOD'] . $config['API_AUTH_CREDS'];
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -68,6 +69,7 @@ function aresPatch($endpoint, $data)
 function aresDelete($endpoint)
 {
     $ch = curl_init($config['API_ROOT'] . $endpoint);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
