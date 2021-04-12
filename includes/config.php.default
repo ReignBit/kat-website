@@ -9,7 +9,6 @@
         "API_ROOT" => "API ROOT URL HERE",
         "API_AUTH_METHOD" => "Basic ",
         "API_AUTH_CREDS" => base64_encode("USERNAME HERE:PASSWORD HERE"),
-        //"API_AUTH_CREDS" => base64_encode("kat:test"),
         "DISCORD_OAUTH_LOGIN_REDIRECT_URL" => "REDIRECT URL HERE"
     );
 ?>
